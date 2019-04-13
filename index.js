@@ -21,6 +21,9 @@ $(function() {
         console.log(e.target.className.includes(1))
 
         if(e.target.className.includes(1)) {
+            $('.modal-container').css('display', 'block')
+            $('.modal-container--close').click(function(){$('.modal-container').css('display', 'none')})
+
             row = 1
             column = 1
         } else if (e.target.className.includes(2)){
