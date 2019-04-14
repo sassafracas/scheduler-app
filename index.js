@@ -41,42 +41,32 @@ $(function() {
             "3 AM" : 23,
             "4 AM" : 24
         }
-        console.log(this)
-        console.log(e)
-        console.log(e.target.className.includes(1))
 
-        if(e.target.className.includes(1)) {
-            column = 1
+        column = e.target.className.match(/\d+/)[0]
+        console.log("click column value", column)
 
-            $('.modal-container').css('display', 'block')
+        $('.modal-container').css('display', 'block')
 
-            $('.modal-container--close').click(function(){
-                $('.modal-container').css('display', 'none')
-            })
-            
-            $('.modal-container--form').submit(function(e){
-                e.preventDefault()
+        $('.modal-container--close').click(function(){
+            $('.modal-container').css('display', 'none')
+        })
+        
+        $('.modal-container--form').submit(function(e){
+            e.preventDefault()
 
-                row = timeObj[$( "input:first" ).val()]
-                length = (timeObj[$( "input:last" ).val()]) - (timeObj[$( "input:first" ).val()])
-                console.log($( "input:last" ).val())
-                $('.modal-container--form')[0].reset()
-                $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column}'>Event</div>`)
-            })
+            row = timeObj[$( "input:first" ).val()]
+            console.log("row", row)
+            length = (timeObj[$( "input:last" ).val()]) - (timeObj[$( "input:first" ).val()])
+            console.log("length", length)
+            console.log("column", column)
+            $('.modal-container--form')[0].reset()
+            $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column}'>Event</div>`)
+        })
 
-            
-        } else if (e.target.className.includes(2)){
-            
-            row = 1
-            column = 2
-        }
-        // $(`#${row}`).replaceWith(`<div class='event' style='grid-row:${row}/span ${y};grid-column:${z}'>Event</div>`)
-        console.log(row)
-
-        // e.target
+//Fix multiple events not working, fix css of row colors, fix events that come from end and loop back
         console.log(this)
       });
-//create a new div with a predefined css event class then change grid-column and grid-row property based on the div it was clicked on
+
     // let e = jQuery.Event( "click" );
     // $( ".content > div" ).trigger( e );
   });
