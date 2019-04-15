@@ -51,13 +51,8 @@
     grid-template-rows: repeat(24, 1fr); 
     grid-template-columns: 1fr;
     font-size: 14px;
-    align-items: center;
-    justify-content: end;
     background-color: #F7F7F7;
-
     border-left: 1px solid rgba(0, 0, 0, 0.25);
-
-    
 }
 
 .times > div {
