@@ -14,6 +14,7 @@ $(function() {
     $('.date').text(`${output}`)
 
     $( ".planes" ).click(function(e) {
+
         let row = 0, length = 1, column = 0
         let timeObj = {
             "5 AM" : 1,
@@ -45,7 +46,7 @@ $(function() {
         column = e.target.className.match(/\d+/)[0]
         console.log("click column value", column)
 
-        $('.modal-container').css('display', 'block')
+        $('.modal-container').toggle()
 
         $('.modal-container--close').click(function(){
             $('.modal-container').css('display', 'none')
@@ -53,14 +54,18 @@ $(function() {
         
         $('.modal-container--form').submit(function(e){
             e.preventDefault()
+            e.stopImmediatePropagation()
 
             row = timeObj[$( "#start-select" ).val()]
             console.log("row", row)
+          
             length = (timeObj[$( "#end-select" ).val()]) - (timeObj[$( "#start-select" ).val()])
             console.log("length", length)
             console.log("column", column)
+
+            $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column};background-color: yellow;'>Event</div>`)
             $('.modal-container--form')[0].reset()
-            $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column}'>Event</div>`)
+            console.log("run")
         })
 
 //Fix multiple events not working, fix css of row colors, fix events that come from end and loop back
