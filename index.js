@@ -54,9 +54,9 @@ $(function() {
         $('.modal-container--form').submit(function(e){
             e.preventDefault()
 
-            row = timeObj[$( "input:first" ).val()]
+            row = timeObj[$( "#start-select" ).val()]
             console.log("row", row)
-            length = (timeObj[$( "input:last" ).val()]) - (timeObj[$( "input:first" ).val()])
+            length = (timeObj[$( "#end-select" ).val()]) - (timeObj[$( "#start-select" ).val()])
             console.log("length", length)
             console.log("column", column)
             $('.modal-container--form')[0].reset()
