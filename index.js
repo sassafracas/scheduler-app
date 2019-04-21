@@ -54,17 +54,20 @@ $(function() {
         
         $('.modal-container--form').submit(function(e){
             e.preventDefault()
-            e.stopImmediatePropagation()
+            
 
             row = timeObj[$( "#start-select" ).val()]
             console.log("row", row)
           
+
             length = (timeObj[$( "#end-select" ).val()]) - (timeObj[$( "#start-select" ).val()])
             console.log("length", length)
             console.log("column", column)
 
-            $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column};background-color: yellow;'>Event</div>`)
+            $('.content').append(`<div class='event' style='grid-row:${row}/span ${length};grid-column:${column};background-color: yellow;'>Reservation</div>`)
             $('.modal-container--form')[0].reset()
+            $('.modal-container--form').off()
+            $('.modal-container').toggle()
             console.log("run")
         })
 
