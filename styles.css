@@ -80,7 +80,6 @@
     padding-top: 8px;
     font-size: 14px;
     position: absolute;
-    background-color: yellow;
     height: 100%;
 }
 
@@ -103,10 +102,10 @@
 
 .modal {
     background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
 .modal-container--close {
@@ -118,55 +117,7 @@
 
 .modal-container--close:hover,
 .modal-container--close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
-/* 
-.content > div:nth-child(n+1):nth-child(-n+7){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+15):nth-child(-n+21){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+29):nth-child(-n+35){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+43):nth-child(-n+49){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+57):nth-child(-n+63){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+71):nth-child(-n+77){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+85):nth-child(-n+91){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+99):nth-child(-n+105){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+113):nth-child(-n+119){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+127):nth-child(-n+133){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+141):nth-child(-n+147){
-    background-color: #F7F7F7;
-}
-
-.content > div:nth-child(n+155):nth-child(-n+161){
-    background-color: #F7F7F7;
-} */
