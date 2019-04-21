@@ -68,13 +68,6 @@ $(function() {
             $('.modal-container--form')[0].reset()
             $('.modal-container--form').off()
             $('.modal-container').toggle()
-            console.log("run")
         })
-
-//Fix multiple events not working, fix css of row colors, fix events that come from end and loop back
-        console.log(this)
       });
-
-    // let e = jQuery.Event( "click" );
-    // $( ".content > div" ).trigger( e );
   });
